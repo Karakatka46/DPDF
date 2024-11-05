@@ -6,7 +6,7 @@
     • pdfkit
     • PyPDF2
     • wkhtmltopdf
-Исполняемые файлы представлены по ссылке https://github.com/Karakatka46/-.git
+Исполняемые файлы представлены по ссылке https://github.com/Karakatka46/DPDF
 Первая программа metoda.py позволяет собрать гиперссылки функций с сайта https://www.mathworks.com/help/wlan/referencelist.html и загрузить каждую ссылку в виде PDF  файла. 
 1. С помощью инструмента DevTools необходимо скопировать внешний код html страницы в переменную url
 2. Создать переменную base_url для будущих ссылок
