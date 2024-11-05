@@ -1,11 +1,13 @@
 import PyPDF2
 import os
 
+# 1. Путь к папке с PDF файлами
 pdf_folder = "/home/aplelsin/wlan_parsing/asgasdf"
-# Создаем объект PdfMerger для объединения PDF
+
+# 2. Создаем объект PdfMerger для объединения PDF
 merger = PyPDF2.PdfMerger()
 
-# Получаем список всех файлов в указанной папке
+# 3. Получаем список всех файлов в указанной папке
 for filename in sorted(os.listdir(pdf_folder)):
     if filename.endswith(".pdf"):  # Проверяем, что файл имеет расширение .pdf
         pdf_file = os.path.join(pdf_folder, filename)  # Получаем полный путь к файлу
@@ -16,8 +18,8 @@ for filename in sorted(os.listdir(pdf_folder)):
         except Exception as e:
             print(f"Ошибка при добавлении {pdf_file}: {e}")
 
-# Сохраняем итоговый объединенный PDF файл
-output_filename = "Wlan_prefinal.pdf"
+# 4. Сохраняем итоговый объединенный PDF файл
+output_filename = "Wlan_final.pdf"
 merger.write(output_filename)
 merger.close()
 
